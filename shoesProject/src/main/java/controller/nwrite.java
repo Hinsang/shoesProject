@@ -20,9 +20,6 @@ public class nwrite extends HttpServlet {
 		String ntitle = request.getParameter("ntitle");
 		String ncontent = request.getParameter("ncontent");
 		
-		System.out.println(ntitle);
-		System.out.println(ncontent);
-		
 		boolean result = NoticeDao.getInstance().nwrite(ntitle, ncontent);
 		
 		response.getWriter().print(result);

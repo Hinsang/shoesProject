@@ -26,5 +26,13 @@ function notice() {
 }
 
 function ndelete(i) {
-	alert(i)
+	$.ajax({
+		url: "/shoesProject/ndelete",
+		data: {"nno" : i},
+		success: function (re) {
+			if(re == 'true') {			
+				location.reload()
+			}
+		}
+	})
 }

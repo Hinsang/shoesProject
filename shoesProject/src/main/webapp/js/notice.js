@@ -9,8 +9,10 @@ function nwrite() {
 		success : function (re) {
 			if(re == 'true') {
 				alert('등록성공!!')
+				location.href = "/shoesProject/admin.jsp"
 			} else {
 				alert('등록실패!!')
+				locaction.reload()
 			}
 		}
 	})

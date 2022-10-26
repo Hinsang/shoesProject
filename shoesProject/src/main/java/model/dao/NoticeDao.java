@@ -50,4 +50,38 @@ public class NoticeDao extends Dao {
 		return null;
 	}
 	
+	public boolean ndelete(int nno) {
+		String sql = "delete from notice where nno="+nno;
+		
+		try {
+			ps = con.prepareStatement(sql);
+			ps.executeUpdate();
+			return true;
+		} catch (Exception e) {
+			System.out.println(e);
+		}
+		return false;
+	}
+	
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
